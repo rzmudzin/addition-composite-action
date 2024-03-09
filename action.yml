@@ -19,10 +19,11 @@ runs:
       run: |
          echo "First Number ${FIRST_NUMBER}"
          echo "Second Number: ${SECOND_NUMBER}"
-         echo "result=44" >> $GITHUB_OUTPUT
+         sddResult=$((FIRST_NUMBER + SECOND_NUMBER))
+         echo "result=${sddResult}" >> $GITHUB_OUTPUT
       shell: bash
       env:
-#        SECRET1: ${{ fromJSON(inputs.secrets).SECRET1 }}
+        SECRET1: ${{ fromJSON(inputs.secrets).SECRET1 }}
         FIRST_NUMBER: ${{ fromJSON(inputs.actionInputs).add-action-first-value }}
         SECOND_NUMBER: ${{ fromJSON(inputs.actionInputs).add-action-second-value }}
 
