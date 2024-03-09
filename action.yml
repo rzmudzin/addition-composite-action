@@ -6,11 +6,11 @@ inputs:
     required: true
   actionInputs:
     description: 'Inputs'
-    required: true
-outputs:
-  sum-of-numbers:
-    description: "Sum of inputs"
-    value: ${{ steps.number-addition.outputs.result }}
+#     required: true
+# outputs:
+#   sum-of-numbers:
+#     description: "Sum of inputs"
+#     value: ${{ steps.number-addition.outputs.result }}
 runs:
   using: "composite"
   steps:
