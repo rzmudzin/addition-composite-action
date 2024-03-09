@@ -19,7 +19,7 @@ runs:
       run: |
          echo "First Number ${FIRST_NUMBER}"
          echo "Second Number: ${SECOND_NUMBER}"
-        echo "result=$(echo 44)" >> $GITHUB_OUTPUT
+         # echo "result=$(echo 44)" >> $GITHUB_OUTPUT
       shell: bash
       env:
 #        SECRET1: ${{ fromJSON(inputs.secrets).SECRET1 }}
