@@ -17,6 +17,8 @@ runs:
     - name: Adds Two Numbers
       id: number-addition
       run: |
+         echo ${{ fromJSON(inputs.actionInputs) }}
+         echo Uno ${{ fromJSON(inputs.actionInputs).first }}
          echo "First Number ${FIRST_NUMBER}"
          echo "Second Number: ${SECOND_NUMBER}"
          addResult=$((FIRST_NUMBER + SECOND_NUMBER))
