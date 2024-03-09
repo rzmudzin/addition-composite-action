@@ -10,7 +10,7 @@ inputs:
 outputs:
   sum-of-numbers:
     description: "Sum of inputs"
-    value: ${{ steps.number-addition.outputs.result }}
+    value: ${{ toJSON(steps.number-addition.outputs) }}
 runs:
   using: "composite"
   steps:
