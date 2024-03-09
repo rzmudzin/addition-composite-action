@@ -19,8 +19,8 @@ runs:
       run: |
          echo "First Number ${FIRST_NUMBER}"
          echo "Second Number: ${SECOND_NUMBER}"
-         sddResult=$((FIRST_NUMBER + SECOND_NUMBER))
-         echo "result=${sddResult}" >> $GITHUB_OUTPUT
+         addResult=$((FIRST_NUMBER + SECOND_NUMBER))
+         echo "result=${addResult}" >> $GITHUB_OUTPUT
       shell: bash
       env:
         SECRET1: ${{ fromJSON(inputs.secrets).SECRET1 }}
