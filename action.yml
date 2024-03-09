@@ -6,11 +6,11 @@ inputs:
     required: true
   actionInputs:
     description: 'Inputs'
-#     required: true
-# outputs:
-#   sum-of-numbers:
-#     description: "Sum of inputs"
-#     value: ${{ steps.number-addition.outputs.result }}
+    required: true
+outputs:
+  sum-of-numbers:
+    description: "Sum of inputs"
+    value: ${{ steps.number-addition.outputs.result }}
 runs:
   using: "composite"
   steps:
@@ -19,7 +19,7 @@ runs:
       run: |
          echo "First Number ${FIRST_NUMBER}"
          echo "Second Number: ${SECOND_NUMBER}"
-         # echo "result=$(echo 44)" >> $GITHUB_OUTPUT
+         echo "result=44" >> $GITHUB_OUTPUT
       shell: bash
       env:
 #        SECRET1: ${{ fromJSON(inputs.secrets).SECRET1 }}
